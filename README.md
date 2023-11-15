@@ -14,8 +14,7 @@ import os
 # Replace YOUR_DRIVE_URL with the direct link to the Google Drive file
 drive_url = 'YOUR_DRIVE_URL'
 ''''
-[https://drive.google.com/u/0/uc?id=1rE66914xj9HfNXFHGjtMxMq--Hbk3A69&export=download&confirm=t&uuid=2b4102a9\
-    -5972-416b-97eb-88ba28ee326d&at=AB6BwCAGuaEHjfdCyfAwGaV0E-O9:1700047389408'](https://drive.google.com/u/0/uc?id=11Nr0q0HbuXdbLhpoTgXImlvzEuW5pyVA&export=download&confirm=t&uuid=dadd5b8e-5340-4d69-ace8-6c1b6d6ea2fc&at=AB6BwCAyKZQsBPE5gapIHUG6JD_D:1700062251798)
+https://drive.google.com/u/0/uc?id=11Nr0q0HbuXdbLhpoTgXImlvzEuW5pyVA&export=download&confirm=t&uuid=dadd5b8e-5340-4d69-ace8-6c1b6d6ea2fc&at=AB6BwCAyKZQsBPE5gapIHUG6JD_D:1700062251798
 '''
 # Directory where the downloaded file will be saved
 save_dir = '/kaggle/working/'
@@ -24,10 +23,15 @@ save_dir = '/kaggle/working/'
 response = requests.get(drive_url)
 
 # Write the content of the response to a file in the save_dir
-with open(os.path.join(save_dir, 'submissions.pth'), 'wb') as f:
+with open(os.path.join(save_dir, 'submission.pth'), 'wb') as f:
     f.write(response.content)
 
+3. Run
+!git clone https://github.com/tttruong0812/Unet-Polyp-Segmentation.git # clone my git repo
 
-```python
+!mkdir output_masks_directory
 
-!git clone https://github.com/hdd0510/BKAI_Polyp.git # clone my git repo
+!python /kaggle/working/BKAI_Polyp/infer.py --checkpoint '/kaggle/working/submission.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/output_masks_directory'
+
+# parse args checkpoint, test_dir (please add data of competition), mask_dir
+
