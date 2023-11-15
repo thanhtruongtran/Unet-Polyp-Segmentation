@@ -48,6 +48,7 @@ def mask_to_rgb(mask, color_dict):
 model.eval()
 test_images_directory = "/kaggle/input/bkai-igh-neopolyp/test/test"
 output_masks_directory = "test_mask/"
+output_overlaps_directory = "test_overlapmask/"
 
 for filename in os.listdir(test_images_directory):
     image_path = os.path.join(test_images_directory, filename)
