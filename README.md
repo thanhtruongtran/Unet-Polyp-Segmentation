@@ -38,8 +38,8 @@ with open(os.path.join(save_dir, 'submission.pth'), 'wb') as f:
 ```
 
 ```python
-!python /kaggle/working/Unet-Polyp-Segmentation/infer.py --checkpoint '/kaggle/working/submission.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/output_masks_directory'
+!python /kaggle/working/Unet-Polyp-Segmentation/infer.py --checkpoint '/kaggle/working/submission.pth' --test_images_directory '/kaggle/input/bkai-igh-neopolyp/test/test' --output_masks_directory '/kaggle/working/output_masks_directory'
 
-# parse args checkpoint, test_dir (please add data of competition), mask_dir
+# parse args checkpoint, test_images_directory(please add data of competition), output_masks_directory
 ```
 
