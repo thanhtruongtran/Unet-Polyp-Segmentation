@@ -3,7 +3,7 @@ import pandas as pd
 import cv2
 import torch
 import os
-!pip install segmentation-models-pytorch
+pip install segmentation-models-pytorch
 import segmentation_models_pytorch as smp
 
 from albumentations.pytorch.transforms import ToTensorV2
