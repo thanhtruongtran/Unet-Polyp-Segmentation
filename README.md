@@ -25,13 +25,21 @@ response = requests.get(drive_url)
 # Write the content of the response to a file in the save_dir
 with open(os.path.join(save_dir, 'submission.pth'), 'wb') as f:
     f.write(response.content)
+```
 
 3. Run
+
+```python
 !git clone https://github.com/tttruong0812/Unet-Polyp-Segmentation.git # clone my git repo
+```
 
+```python
 !mkdir output_masks_directory
+```
 
+```python
 !python /kaggle/working/BKAI_Polyp/infer.py --checkpoint '/kaggle/working/submission.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/output_masks_directory'
 
 # parse args checkpoint, test_dir (please add data of competition), mask_dir
+```
 
