@@ -26,3 +26,8 @@ response = requests.get(drive_url)
 # Write the content of the response to a file in the save_dir
 with open(os.path.join(save_dir, 'submissions.pth'), 'wb') as f:
     f.write(response.content)
+
+
+```python
+
+!git clone https://github.com/hdd0510/BKAI_Polyp.git # clone my git repo
