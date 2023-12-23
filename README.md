@@ -1,5 +1,7 @@
 # Unet-Polyp-Segmentation
 
+Link to tournament: https://www.kaggle.com/competitions/bkai-igh-neopolyp/overview
+
 # Test model
 
 ## Instructions
